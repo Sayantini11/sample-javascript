@@ -13,6 +13,8 @@
    undefined
    null
    */
+
+   
 var n;
 console.log(n);
 var n1 = 10;
