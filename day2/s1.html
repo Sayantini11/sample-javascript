@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Simple Interest
+        </title>
+    </head>
+    <body>
+        <h2> Simple Interest Calculator</h2>
+        <label for = "principle">Principle Amount</label> <br>
+        <input type = "text" id = "principle"> <br>
+        <label for = "term">Term</label> <br>
+        <select id = "term">
+            <option value = "">Select term</option>
+            <option value = "5">5</option>
+            <option value = "10">10</option>
+            <option value = "15">15</option>
+        </select> <br>
+        <label for = "rate">Rate of interest</label> <br>
+        <input type = "text" id = "rate"> <br>
+
+        <button id = "calculate"> Calculate </button>
+
+        <p id = "result"></p>
+
+        <script>
+            var p = document.getElementById('principle');
+            var t = document.getElementById('term');
+            var r = document.getElementById('rate');
+            var btn = document.getElementById('calculate');
+            var res = document.getElementById('result');
+
+            btn.addEventListener('click', function(){
+                var pr = Number(p.value);
+                var ti = Number(t.value);
+                var ra = Number(r.value);
+                var si = (pr*ti*ra)/100;
+                res.innerHTML =  `Interest is : ${si}`;
+            }, false);
+        </script>
+    </body>
+</html>
